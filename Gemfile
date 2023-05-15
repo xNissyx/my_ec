@@ -66,5 +66,3 @@ gem "rubocop-packaging", require: false
 gem "rubocop-rspec"
 
 gem "devise"
-
-gem "tailwindcss-rails", "~> 2.0"
