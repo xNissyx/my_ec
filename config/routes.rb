@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+
   get 'homes/top'
-  devise_for :customers, controllers: {
+
+  devise_for :customers, skip: [:passwords], controllers: {
    sessions: "customer/sessions",
    registrations: "customer/registrations"
  }
 
-  devise_for :admins, controllers: {
+  devise_for :admins, skip: [:registrations, :passwords], controllers: {
   sessions: "admin/sessions"
 }
 
