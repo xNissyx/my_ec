@@ -2,6 +2,10 @@
 
 Rails.application.routes.draw do
 
+  scope module: :customer do
+    get 'customers/confirm_withdraw'
+    patch 'customers/withdraw'
+  end
   get 'homes/top'
 
   devise_for :customers, skip: [:passwords], controllers: {
@@ -14,6 +18,13 @@ Rails.application.routes.draw do
 }
 
   root to: "homes#top"
+  
+    resources :customers do
+     collection do
+       get 'confirm_withdraw'
+       patch 'withdraw'
+     end
+    end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
