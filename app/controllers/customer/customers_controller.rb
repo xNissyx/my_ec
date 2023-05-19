@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Customer::CustomersController < ApplicationController
   before_action :authenticate_customer!
 
