@@ -23,8 +23,16 @@
   padding: 30px 38px 66px;
   margin: 0 auto;
   background-color: #eee;
-  border: 3px dotted rgba(0,0,0,0.1);  
+  border: 3px dotted red;  
   }
+
+.form-signup{
+  max-width: 600px;
+  padding: 30px 38px 66px;
+  margin: 0 auto;
+  background-color: #eee;
+  border: 3px dotted red;
+}
 
 .form-signin-heading {
   text-align:center;
@@ -45,7 +53,6 @@ input[type="text"] {
 }
 
 input[type="password"] {
-  margin-bottom: 20px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }

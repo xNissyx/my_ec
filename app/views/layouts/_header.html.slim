@@ -8,7 +8,7 @@ ul.nav.justify-content-center
     li.nav-item
       = link_to "Account Settings", edit_customer_registration_path, class: "nav-link btn btn-outline-danger"
     li.nav-item
-      = link_to "Sign Out", destroy_customer_session_path, class: "nav-link btn btn-outline-danger"
+      = link_to "Sign Out", destroy_customer_session_path, method: :delete, class: "nav-link btn btn-outline-danger"
   - else
     li.nav-item
       = link_to "Sign Up", new_customer_registration_path, class: "nav-link btn btn-outline-danger"
