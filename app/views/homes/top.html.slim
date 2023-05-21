@@ -1,5 +1,29 @@
-h1
-  | TOPページ
-h1
-  | 退会機能の実装
-= link_to "退会したい方はこちら", confirm_withdraw_customers_path
+div.container
+  h1
+    | TOPページ
+  h1
+    | 退会機能の実装
+  = link_to "退会したい方はこちら", confirm_withdraw_customers_path, class: "btn btn-danger active"
+  <main>
+    <section class="hero">
+      <h2>簡単でおいしいレシピをご紹介</h2>
+      <p>新鮮な食材を使ったバラエティ豊かなレシピを掲載しています。</p>
+      <a href="#" class="btn">レシピを見る</a>
+    </section>
+  
+    <section class="featured-recipes">
+      <h3>おすすめレシピ</h3>
+      <div class="recipe-card">
+        <img src="recipe1.jpg" alt="料理写真">
+        <h4>スパゲッティ・ボロネーゼ</h4>
+      </div>
+      <div class="recipe-card">
+        <img src="recipe2.jpg" alt="料理写真">
+        <h4>グリルチキンサラダ</h4>
+      </div>
+      <div class="recipe-card">
+        <img src="recipe3.jpg" alt="料理写真">
+        <h4>チョコレートケーキ</h4>
+      </div>
+    </section>
+  </main>

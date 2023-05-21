@@ -9,6 +9,6 @@ class Customer::CustomersController < ApplicationController
   def withdraw
     current_customer.update(is_deleted: true)
     reset_session
-    redirect_to root_path, notice: "退会の成功しました。"
+    redirect_to root_path, notice: "退会に成功しました。"
   end
 end
