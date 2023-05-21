@@ -1,0 +1,22 @@
+div.container
+  p#notice
+    = notice
+  p
+    strong
+      | Name:
+    = @recipe.name
+  p
+    strong
+      | Description:
+    = @recipe.description
+  p
+    strong
+      | Cooking time:
+    = @recipe.cooking_time
+  p
+    strong
+      | User:
+    = @recipe.user_id
+  = link_to 'Edit', edit_recipe_path(@recipe)
+  |  | 
+  = link_to 'Back', recipes_path

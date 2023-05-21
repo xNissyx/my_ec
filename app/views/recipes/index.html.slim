@@ -1,0 +1,39 @@
+p#notice
+  = notice
+.container
+  h1
+    | Recipes
+  h1
+    | 馬鹿でかうまそうパンケーキ
+  img[src="/assets/pancakes-gcf150bcae_1280.jpg" width="90%"]
+  table
+    thead
+      tr
+        th
+          | Name
+        th
+          | Description
+        th
+          | Cooking time
+        th
+          | User
+        th[colspan="3"]
+    tbody
+      - @recipes.each do |recipe|
+        tr
+          td
+            = recipe.name
+          td
+            = recipe.description
+          td
+            = recipe.cooking_time
+          td
+            = recipe.user_id
+          td
+            = link_to 'Show', recipe
+          td
+            = link_to 'Edit', edit_recipe_path(recipe)
+          td
+            = link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' }
+  br
+  = link_to 'New Recipe', new_recipe_path

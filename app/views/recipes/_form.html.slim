@@ -1,0 +1,25 @@
+= form_with(model: recipe) do |form|
+  - if recipe.errors.any?
+    #error_explanation
+
+    h2
+      = pluralize(recipe.errors.count, "error")
+      |  prohibited this recipe from being saved:
+    ul
+      - recipe.errors.each do |error|
+        li
+          = error.full_message
+  .field
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :description
+    = form.text_field :description
+  .field
+    = form.label :cooking_time
+    = form.number_field :cooking_time
+  .field
+    = form.label :user_id
+    = form.number_field :user_id
+  .actions
+    = form.submit

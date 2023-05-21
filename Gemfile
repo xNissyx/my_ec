@@ -66,3 +66,5 @@ gem "rubocop-packaging", require: false
 gem "rubocop-rspec"
 
 gem "devise"
+gem "slim-rails"
+gem "html2slim"
