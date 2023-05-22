@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :products
   scope module: :customer do
     get "customers/confirm_withdraw"
     patch "customers/withdraw"
