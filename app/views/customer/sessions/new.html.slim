@@ -1,11 +1,4 @@
-.container
-  .wrapper
-  = form_with(model: @customer, url: customer_session_path, class: "form-signin") do |f|
-    h3.form-signin-heading Welcome Back! Please Sign In
-    hr.colorgraph
-    
-    = f.label :email, class: "mb-1"
-    = f.text_field :email, class: "form-control", placeholder: "Email", required: true, autofocus: true
-    = f.label :password, "パスワード", class: "mb-1"
-    = f.password_field :password, class: "form-control mb-4", placeholder: "Password", required: true
-    = f.submit "Sign in", class: "btn btn-lg btn-primary btn-block"
+= simple_form_for @customer do |f|
+  = f.input :name, label: "Name"
+  = f.input :email, label: "Email"
+  = f.button :submit, "Save"
